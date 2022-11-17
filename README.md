@@ -1,6 +1,7 @@
 # ASCII Art CLI Tool
 
-a python-based CLI tool for creating ascii art.
+A python-based CLI tool for creating ascii art.
+It can process singular image files or entire folders.
 
 ## Usage
 

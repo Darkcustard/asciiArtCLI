@@ -122,15 +122,14 @@ def main():
         if args.outfile != None:
             if os.path.isdir(args.outfile):
 
-                for fdx,file in enumerate(os.listdir(args.file)):
+                for fdx,file in enumerate(sorted(os.listdir(args.file))):
                     process(args.file+file,args.outfile+str(fdx)+'.txt')
-        
             else:
                 print("ERROR: When in batch mode, outfile must be a directory")
 
         else:
 
-            for file in os.listdir(args.file):
+            for file in sorted(os.listdir(args.file)):
                 process(args.file+file)
 
     else:

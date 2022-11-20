@@ -38,7 +38,7 @@ def main():
     def process(imagepath,outfile=None):
 
         # Generate ASCII Art
-        chars = ['  ','. ' ,', ',"* ", '% ',"# ","@ ","@ "]
+        chars = ['  ','. ' ,', ',"* ", '% ',"# ","@ "]
 
         if args.verbose:
             print("Loading Image...")

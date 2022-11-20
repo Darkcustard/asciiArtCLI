@@ -42,7 +42,19 @@ def main():
 
         if args.verbose:
             print("Loading Image...")
-        image = np.asarray(Image.open(imagepath))
+
+
+        raw_image = Image.open(imagepath)
+        raw_image = raw_image.convert('RGB')
+        
+        image = np.asarray(raw_image)
+        
+        
+        width = raw_image.width
+        height = raw_image.height
+
+
+        
 
         if args.auto:
             if args.verbose:
@@ -73,8 +85,9 @@ def main():
                 asciiRow = ''
 
                 for pdx,pixel in enumerate(row):
-
+                    
                     if pdx % round(1/args.scale) == 0:
+                        
 
                         brightness = sum(pixel)/3
 
